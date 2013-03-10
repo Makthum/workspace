@@ -32,7 +32,7 @@ public class LocalHostFinder {
 			           System.out.println("Interface " + iface.getName() + ":");
 			           Enumeration<InetAddress> addrList = iface.getInetAddresses();
 			            if (!addrList.hasMoreElements()) {
-			              System.out.println("\t(No addresses for this interface)");
+			            				              System.out.println("\t(No addresses for this interface)");
 			           }
 			            while (addrList.hasMoreElements()) {
 			              InetAddress address = addrList.nextElement();
