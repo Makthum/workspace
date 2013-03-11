@@ -28,11 +28,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Rectangle;
+import javax.swing.border.LineBorder;
 
 public class test extends JFrame {
 
 	private JPanel contentPane;
-	private final JTextField textField = new JTextField();
+	private final JTextField textField1 = new JTextField();
 	private JPasswordField passwordField;
 
 	/**
@@ -61,18 +62,18 @@ public class test extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBounds(new Rectangle(5, 0, 0, 0));
-		contentPane.setFont(new Font("SWTOR Trajan", Font.BOLD | Font.ITALIC, 15));
+		contentPane.setFont(new Font("SWTOR Trajan", Font.BOLD, 15));
 		contentPane.setBackground(new Color(0, 204, 255));
-		contentPane.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(51, 0, 0), null, null, null));
+		contentPane.setBorder(UIManager.getBorder("TextField.border"));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		textField.setBounds(197, 105, 157, 32);
-		textField.setMaximumSize(new Dimension(10, 10));
-		textField.setBorder(UIManager.getBorder("Spinner.border"));
-		textField.setBackground(SystemColor.control);
-		textField.setAlignmentX(Component.RIGHT_ALIGNMENT);
-		contentPane.add(textField);
-		textField.setColumns(5);
+		textField1.setBounds(197, 105, 157, 32);
+		textField1.setMaximumSize(new Dimension(10, 10));
+		textField1.setBorder(UIManager.getBorder("Spinner.border"));
+		textField1.setBackground(SystemColor.control);
+		textField1.setAlignmentX(Component.RIGHT_ALIGNMENT);
+		contentPane.add(textField1);
+		textField1.setColumns(5);
 		
 		JLabel lblNewLabel_1 = new JLabel("Login ");
 		lblNewLabel_1.setBounds(170, 23, 80, 41);
@@ -90,6 +91,7 @@ public class test extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel = new JLabel("Password");
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setBounds(49, 148, 105, 32);
 		lblNewLabel.setFont(new Font("SWTOR Trajan", Font.BOLD, 14));
 		contentPane.add(lblNewLabel);
@@ -101,7 +103,8 @@ public class test extends JFrame {
 		contentPane.add(passwordField);
 		
 		JButton btnNewButton = new JButton("X");
-		btnNewButton.setBounds(411, 0, 39, 23);
+		btnNewButton.setBorder(UIManager.getBorder("TextPane.border"));
+		btnNewButton.setBounds(396, 0, 54, 23);
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -116,10 +119,26 @@ public class test extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("_");
-		btnNewButton_1.setBounds(373, 0, 39, 23);
-		btnNewButton_1.setHorizontalTextPosition(SwingConstants.LEFT);
-		btnNewButton_1.setHorizontalAlignment(SwingConstants.LEFT);
+		btnNewButton_1.setBorder(UIManager.getBorder("RadioButtonMenuItem.border"));
+		btnNewButton_1.setBounds(349, 0, 48, 23);
+		btnNewButton_1.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnNewButton_1.setVerticalAlignment(SwingConstants.TOP);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Let Me Chat !");
+		btnNewButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			String textfield1=textField1.getText();
+			System.out.print(textfield1);
+			char[] passwordFd=passwordField.getPassword();
+			System.out.print(passwordFd);
+			}
+		});
+		btnNewButton_2.setFont(new Font("SWTOR Trajan", Font.BOLD, 12));
+		btnNewButton_2.setBackground(new Color(51, 102, 255));
+		btnNewButton_2.setBorder(new LineBorder(new Color(0, 0, 0), 0, true));
+		btnNewButton_2.setBounds(108, 220, 201, 23);
+		contentPane.add(btnNewButton_2);
 	}
 }
