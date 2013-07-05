@@ -35,6 +35,7 @@ public class test extends JFrame {
 	private JPanel contentPane;
 	private final JTextField textField1 = new JTextField();
 	private JPasswordField passwordField;
+	private JPasswordField passwordField_1;
 
 	/**
 	 * Launch the application.
@@ -82,7 +83,7 @@ public class test extends JFrame {
 		lblNewLabel_1.setFont(new Font("SWTOR Trajan", Font.BOLD, 16));
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("User Name ");
+		JLabel lblNewLabel_2 = new JLabel("Nick name");
 		lblNewLabel_2.setBounds(49, 105, 134, 32);
 		lblNewLabel_2.setForeground(new Color(0, 0, 0));
 		lblNewLabel_2.setPreferredSize(new Dimension(14, 14));
@@ -90,14 +91,14 @@ public class test extends JFrame {
 		lblNewLabel_2.setAlignmentX(Component.CENTER_ALIGNMENT);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel = new JLabel("Password");
+		JLabel lblNewLabel = new JLabel("Host Ip / Port");
 		lblNewLabel.setForeground(new Color(0, 0, 0));
-		lblNewLabel.setBounds(49, 148, 105, 32);
+		lblNewLabel.setBounds(10, 148, 144, 32);
 		lblNewLabel.setFont(new Font("SWTOR Trajan", Font.BOLD, 14));
 		contentPane.add(lblNewLabel);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(197, 148, 157, 32);
+		passwordField.setBounds(197, 148, 69, 32);
 		passwordField.setBorder(UIManager.getBorder("Spinner.border"));
 		passwordField.setBackground(SystemColor.control);
 		contentPane.add(passwordField);
@@ -140,5 +141,11 @@ public class test extends JFrame {
 		btnNewButton_2.setBorder(new LineBorder(new Color(0, 0, 0), 0, true));
 		btnNewButton_2.setBounds(108, 220, 201, 23);
 		contentPane.add(btnNewButton_2);
+		
+		passwordField_1 = new JPasswordField();
+		passwordField_1.setBorder(UIManager.getBorder("Spinner.border"));
+		passwordField_1.setBackground(SystemColor.menu);
+		passwordField_1.setBounds(285, 148, 69, 32);
+		contentPane.add(passwordField_1);
 	}
 }
