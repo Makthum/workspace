@@ -5,11 +5,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome</title>
+<title>Welcome to AMS</title>
 </head>
 <body>
 <f:view>
 
-</f:view>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<center>	<h:panelGrid border="0" columns="1" style="height: 263px; width: 324px; ">
+			<h:commandButton value="In-Store checkout" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="On-Line check out" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="Logout" style="width: 274px; height: 44px"></h:commandButton>
+				
+				
+
+
+
+				</h:panelGrid></center>
+	</f:view>
 </body>
 </html>
