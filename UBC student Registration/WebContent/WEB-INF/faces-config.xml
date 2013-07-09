@@ -8,7 +8,7 @@
 	<managed-bean>
 		<managed-bean-name>student</managed-bean-name>
 		<managed-bean-class>com.ubc.ca.student.Student</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>index</display-name>

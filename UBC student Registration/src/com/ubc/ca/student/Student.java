@@ -1,9 +1,8 @@
 package com.ubc.ca.student;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 
 import com.ubc.ca.service.StudentService;
 
@@ -32,6 +31,13 @@ public String login()
 		StudentService service = new StudentService();
 		 au=service.authenticate(this.userId,this.password);
 		System.out.println(au);
+		if(au.equals("success"))
+		{
+			FacesContext fc=FacesContext.getCurrentInstance();
+			
+			HttpSession session= (HttpSession) fc.getExternalContext().getSession(true);
+			session.setAttribute("username",this.userId);
+		}
 	
 	
 	return au;

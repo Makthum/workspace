@@ -8,21 +8,22 @@ import java.sql.SQLException;
 
 public class StudentService {
 
-	public String authenticate(String UserName, String Password)
+	public String authenticate(String userName, String password)
 	{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ams","scott","temp");
 			String query="select * from \"Login\" where \"userId\"=?";
 			PreparedStatement preparestatement=con.prepareStatement(query);
-			preparestatement.setString(1, UserName);
+			preparestatement.setString(1, userName);
 			ResultSet rs=preparestatement.executeQuery();
-			rs.next();
-			while(rs!=null)
+			if(null!=rs)
 			{
-				System.out.println(rs.getString(1));
-				System.out.println(rs.getString(2));
 				rs.next();
+				if(rs.getString(2).equals(password))
+				return "success";
+				else 
+					return "failure";
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -32,12 +33,7 @@ public class StudentService {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Inside service class");
-		if(UserName.equalsIgnoreCase("Mohamed"))
-			if((Password.equals("M@kthum2")))
-					return "success";
-			else
-				return "failure";
+		
 			return "failure";
 	}
 }
