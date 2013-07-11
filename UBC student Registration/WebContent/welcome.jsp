@@ -23,13 +23,13 @@
 <br>
 <br>
 	<center>	<h:panelGrid border="0" columns="1" style="height: 263px; width: 324px; ">
-			<h:commandButton value="In-Store checkout" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="On-Line check out" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="Logout" style="width: 274px; height: 44px"></h:commandButton>
+		<h:form>	<h:commandButton type="submit" action="instore" value="In-Store checkout" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="On-Line check out" style="width: 274px; height: 44px"></h:commandButton><h:commandButton value="Logout" style="width: 274px; height: 44px"></h:commandButton>
 				
 				
 
 
 
-				</h:panelGrid></center>
+			</h:form>	</h:panelGrid></center>
 	</f:view>
 </body>
 </html>
