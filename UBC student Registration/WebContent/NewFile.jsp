@@ -10,6 +10,15 @@
 <body>
 <f:view>
 
-</f:view>
+		<h:form>
+			<h:outputLabel value="UPC"></h:outputLabel><h:inputText value="#{shoppingCart.UPC }"></h:inputText>
+			<h:outputLabel value="Title"></h:outputLabel>
+			<h:inputText value="#{shoppingCart.title }"></h:inputText>
+			<h:outputLabel value="Cateogry"></h:outputLabel>
+			<h:inputText  value="#{shoppingCart.category }"></h:inputText>
+			<h:outputLabel value="Quantity"></h:outputLabel>
+			<h:inputText value="#{shoppingCart.quantity }"></h:inputText>
+		</h:form>
+	</f:view>
 </body>
 </html>

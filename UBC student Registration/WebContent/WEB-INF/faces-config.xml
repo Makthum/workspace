@@ -7,13 +7,18 @@
     version="2.0">
 	<managed-bean>
 		<managed-bean-name>student</managed-bean-name>
-		<managed-bean-class>com.ubc.ca.student.Student</managed-bean-class>
+		<managed-bean-class>com.ubc.ca.model.Student</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>loginListener</managed-bean-name>
 		<managed-bean-class>com.ubc.ca.phaselistener.LoginListener</managed-bean-class>
 		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>shoppingCart</managed-bean-name>
+		<managed-bean-class>com.ubc.ca.model.ShoppingCart</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>index</display-name>
@@ -35,7 +40,7 @@
 		<from-view-id>/welcome.jsp</from-view-id>
 		<navigation-case>
 			<from-outcome>instore</from-outcome>
-			<to-view-id>/InStore.jsp</to-view-id>
+			<to-view-id>/Checkout.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<lifecycle>

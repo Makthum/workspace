@@ -1,4 +1,4 @@
-package com.ubc.ca.student;
+package com.ubc.ca.model;
 
 
 import javax.faces.context.FacesContext;
