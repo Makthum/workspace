@@ -43,6 +43,30 @@
 			<to-view-id>/Checkout.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+		<display-name>*</display-name>
+		<from-view-id>/*</from-view-id>
+		<navigation-case>
+			<from-outcome>Add</from-outcome>
+			<to-view-id>/Checkout.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Checkout</display-name>
+		<from-view-id>/Checkout.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>search</from-outcome>
+			<to-view-id>/Results.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>Results</display-name>
+		<from-view-id>/Results.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>AddSearch</from-outcome>
+			<to-view-id>/Checkout.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	<lifecycle>
 		<phase-listener>com.ubc.ca.phaselistener.LoginListener</phase-listener>
 	</lifecycle>

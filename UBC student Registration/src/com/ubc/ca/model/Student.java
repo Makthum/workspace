@@ -4,7 +4,7 @@ package com.ubc.ca.model;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 
-import com.ubc.ca.service.StudentService;
+import com.ubc.ca.service.LoginService;
 
 public class Student {
 private String userId;
@@ -28,7 +28,7 @@ public String login()
 	
 		
 		System.out.println("inside student class");
-		StudentService service = new StudentService();
+		LoginService service = new LoginService();
 		 au=service.authenticate(this.userId,this.password);
 		System.out.println(au);
 		if(au.equals("success"))

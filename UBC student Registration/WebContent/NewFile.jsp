@@ -9,16 +9,14 @@
 </head>
 <body>
 <f:view>
+<script type="text/javascript">
+ 
 
-		<h:form>
-			<h:outputLabel value="UPC"></h:outputLabel><h:inputText value="#{shoppingCart.UPC }"></h:inputText>
-			<h:outputLabel value="Title"></h:outputLabel>
-			<h:inputText value="#{shoppingCart.title }"></h:inputText>
-			<h:outputLabel value="Cateogry"></h:outputLabel>
-			<h:inputText  value="#{shoppingCart.category }"></h:inputText>
-			<h:outputLabel value="Quantity"></h:outputLabel>
-			<h:inputText value="#{shoppingCart.quantity }"></h:inputText>
-		</h:form>
+        window.open('Results.jsp', 'popupWindowName', 'dependent=yes, menubar=no, toolbar=no, height=450, width=700');
+        
+
+    </script>
+		
 	</f:view>
 </body>
 </html>
