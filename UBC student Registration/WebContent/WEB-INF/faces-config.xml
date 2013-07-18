@@ -67,6 +67,14 @@
 			<to-view-id>/Checkout.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	<navigation-rule>
+		<display-name>Checkout</display-name>
+		<from-view-id>/Checkout.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>OrderConfirmation</from-outcome>
+			<to-view-id>/OrderConfirmation.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 	<lifecycle>
 		<phase-listener>com.ubc.ca.phaselistener.LoginListener</phase-listener>
 	</lifecycle>
